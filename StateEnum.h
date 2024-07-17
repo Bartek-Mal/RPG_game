@@ -1,7 +1,8 @@
 #pragma once
 
-enum MenuEnum {
+enum StateEnum {
 	LOGIN,
 	MAINMENU,
-	PAUSEMENU
+	PAUSEMENU,
+	GAME
 };

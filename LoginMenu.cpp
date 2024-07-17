@@ -2,7 +2,8 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-void LoginMenu::Login() {
+
+LoginMenu::LoginMenu() : loginValidation("^[A-Za-z0-9]{1,10}$") {
 }
 
 void LoginMenu::textBox(sf::RenderWindow& window) {
@@ -14,15 +15,15 @@ void LoginMenu::textBox(sf::RenderWindow& window) {
     sf::Sprite backgroundSprite(backgroundTexture);
 
     // User input box
-    sf::RectangleShape NicktextBox(sf::Vector2f(300.f, 50.f));
-    NicktextBox.setPosition(250, 300);
+    sf::RectangleShape NicktextBox(sf::Vector2f(400.f, 50.f));
+    NicktextBox.setPosition(200, 300);
     NicktextBox.setFillColor(Brown);
     NicktextBox.setOutlineThickness(2);
     NicktextBox.setOutlineColor(darkGreen);
 
     // Password input box
-    sf::RectangleShape PasstextBox(sf::Vector2f(300.f, 50.f));
-    PasstextBox.setPosition(250, 400);
+    sf::RectangleShape PasstextBox(sf::Vector2f(400.f, 50.f));
+    PasstextBox.setPosition(200, 400);
     PasstextBox.setFillColor(Brown);
     PasstextBox.setOutlineThickness(2);
     PasstextBox.setOutlineColor(darkGreen);
@@ -36,13 +37,13 @@ void LoginMenu::textBox(sf::RenderWindow& window) {
     nickname.setString("");
     nickname.setCharacterSize(24);
     nickname.setFillColor(sf::Color::Black);
-    nickname.setPosition(260, 310);
+    nickname.setPosition(220, 310);
 
     password.setFont(font);
     password.setString("");
     password.setCharacterSize(24);
     password.setFillColor(sf::Color::Black);
-    password.setPosition(260, 410);
+    password.setPosition(220, 410);
 
     while (window.isOpen() && currentWindow == LOGIN) {
         sf::Event event;
@@ -51,20 +52,26 @@ void LoginMenu::textBox(sf::RenderWindow& window) {
                 window.close();
             }
             else if (event.type == sf::Event::TextEntered) {
-                if (current == 1) {
+                if (current == NICKNAME) {
                     if (event.text.unicode == '\b' && !nicknameInput.empty()) {
                         nicknameInput.pop_back();
                     }
                     else if (event.text.unicode < 128) {
-                        nicknameInput += static_cast<char>(event.text.unicode);
+                        if (nicknameInput.length() < 20) {
+                            nicknameInput += static_cast<char>(event.text.unicode);
+                        }
+
                     }
                 }
-                else if (current == 2) {
+                else if (current == PASSWORD) {
                     if (event.text.unicode == '\b' && !passwordInput.empty()) {
                         passwordInput.pop_back();
                     }
                     else if (event.text.unicode < 128) {
-                        passwordInput += static_cast<char>(event.text.unicode);
+                        if (nicknameInput.length() < 20) {
+                            passwordInput += static_cast<char>(event.text.unicode);
+                        }
+
                     }
                 }
             }
@@ -81,15 +88,30 @@ void LoginMenu::textBox(sf::RenderWindow& window) {
                 }
             }
             else if (event.type == sf::Event::KeyPressed) {
-                if(event.key.code == sf::Keyboard::Enter){
+                if (event.key.code == sf::Keyboard::Enter && std::regex_match(nicknameInput, loginValidation) && std::regex_match(passwordInput, loginValidation)) {
                     currentWindow = MAINMENU;
                 }
             }
         }
 
+        if (std::regex_match(nicknameInput, loginValidation)) {
+            nickname.setFillColor(sf::Color::Black);
+        }
+        else {
+            nickname.setFillColor(sf::Color::Red);
+        }
+
+        if (std::regex_match(passwordInput, loginValidation)) {
+            password.setFillColor(sf::Color::Black);
+        }
+        else {
+            password.setFillColor(sf::Color::Red);
+        }
+
         nickname.setString(nicknameInput);
         password.setString(passwordInput);
 
+        window.clear();
         window.draw(backgroundSprite);
         window.draw(NicktextBox);
         window.draw(PasstextBox);
@@ -99,6 +121,6 @@ void LoginMenu::textBox(sf::RenderWindow& window) {
     }
 }
 
-MenuEnum LoginMenu::getCurrentWindow() const {
+StateEnum LoginMenu::getCurrentWindow() const {
     return currentWindow;
 }

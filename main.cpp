@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "menu.h"
 #include "LoginMenu.h"
-#include "MenuEnum.h"
+#include "StateEnum.h"
 #include <iostream>
 
 int main() {
@@ -14,8 +14,8 @@ int main() {
     }
     sf::Sprite backgroundSprite(backgroundTexture);
 
-
     LoginMenu login;
+    Menu menu;
 
     while (window.isOpen()) {
         sf::Event event;
@@ -24,10 +24,17 @@ int main() {
                 window.close();
             }
         }
+
         window.clear();
         window.draw(backgroundSprite);
         if (login.getCurrentWindow() == LOGIN) {
             login.textBox(window);
+        }
+        else if (menu.getCurrentWindow() == MAINMENU) {
+            menu.MenuDisplay(window);
+        }
+        else if (menu.getCurrentWindow() == GAME) {
+            // Future implementation for the game
         }
         window.display();
     }
