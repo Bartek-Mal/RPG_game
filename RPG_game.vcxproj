@@ -151,6 +151,7 @@
     <ClInclude Include="character.h" />
     <ClInclude Include="characterClass.h" />
     <ClInclude Include="CharacterEnum.h" />
+    <ClInclude Include="facingEnum.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GamePlay.h" />
     <ClInclude Include="LoginEnum.h" />

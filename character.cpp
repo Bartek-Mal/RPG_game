@@ -2,11 +2,11 @@
 
 //warrior
 void Warrior::stats(int* health, int* attack, int* mana, int* defense, int* energy) {
-    *health = 150;
-    *attack = 75;
+    *health = 2000;
+    *attack = 500;
     *mana = 50;
-    *defense = 100;
-    *energy = 80;
+    *defense = 500;
+    *energy = 400;
 }
 
 CharacterEnum Warrior::characterClass() {
@@ -15,11 +15,11 @@ CharacterEnum Warrior::characterClass() {
 
 //mage
 void Mage::stats(int* health, int* attack, int* mana, int* defense, int* energy) {
-    *health = 100;
-    *attack = 150;
-    *mana = 300;
-    *defense = 50;
-    *energy = 50;
+    *health = 1000;
+    *attack = 1000;
+    *mana = 1500;
+    *defense = 200;
+    *energy = 500;
 }
 
 CharacterEnum Mage::characterClass() {
@@ -28,11 +28,11 @@ CharacterEnum Mage::characterClass() {
 
 //elf
 void Elf::stats(int* health, int* attack, int* mana, int* defense, int* energy) {
-    *health = 150;
-    *attack = 75;
-    *mana = 50;
-    *defense = 100;
-    *energy = 80;
+    *health = 1500;
+    *attack = 800;
+    *mana = 400;
+    *defense = 250;
+    *energy = 1000;
 }
 
 CharacterEnum Elf::characterClass() {

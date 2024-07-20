@@ -57,6 +57,8 @@ int main() {
                     int health, attack, mana, defense, energy;
                     playerCharacter->stats(&health, &attack, &mana, &defense, &energy);
                     game.movement();  
+                    game.attack(window);
+                    game.displayStats(health,mana,defense,energy,window, playerCharacter->characterClass());
                     game.player(playerCharacter->characterClass(), window);
                     std::cout << "GAME" << std::endl;
                 }

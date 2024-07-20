@@ -3,13 +3,13 @@
 CharacterClass::CharacterClass() {
     currentWindow = CHARACTER;
     //warrior
-    if (!warrior.loadFromFile("character1.gif")) {
+    if (!warrior.loadFromFile("warrior.gif")) {
         std::cout << "No such file in directory!!" << std::endl;
     }
     else {
         warriorSprite.setTexture(warrior);
-        warriorSprite.setPosition(100, 100);
-        warriorSprite.setScale(1.f, 1.f);
+        warriorSprite.setPosition(70, 70);
+        warriorSprite.setScale(2.f, 2.f);
     }
     //mage
     if (!mage.loadFromFile("mage.png")) {
