@@ -4,5 +4,6 @@ enum StateEnum {
 	LOGIN,
 	MAINMENU,
 	PAUSEMENU,
-	GAME
+	GAME,
+	CHARACTER
 };

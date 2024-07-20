@@ -8,6 +8,8 @@
 
 class Menu {
 public:
+    Menu();
+    ~Menu();
     virtual void MenuDisplay(sf::RenderWindow& window);
     void mousePosition(sf::RenderWindow& window, sf::RectangleShape& startButton, sf::RectangleShape& exitButton, sf::Event& event);
     sf::Color Brown = sf::Color(139, 69, 19);
@@ -17,7 +19,7 @@ public:
 
     virtual StateEnum getCurrentWindow() const;
 protected:
-    StateEnum currentWindow = MAINMENU;
+    StateEnum currentWindow;
     sf::Text start;
     sf::Text exit;
 };

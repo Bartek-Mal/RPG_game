@@ -1,5 +1,11 @@
 #include "menu.h"
 
+Menu::Menu() {
+    currentWindow = MAINMENU;
+}
+
+Menu::~Menu() {};
+
 void Menu::MenuDisplay(sf::RenderWindow& window) {
     sf::Texture backgroundTexture;
     if (!backgroundTexture.loadFromFile("background.png")) {
@@ -75,7 +81,7 @@ void Menu::mousePosition(sf::RenderWindow& window, sf::RectangleShape& startButt
     sf::Vector2i mousePos = sf::Mouse::getPosition(window);
     if (event.type == sf::Event::MouseButtonPressed) {
         if (startButton.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
-            currentWindow = GAME;
+            currentWindow = CHARACTER;
         }
         else if (exitButton.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
             window.close();

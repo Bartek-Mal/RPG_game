@@ -2,9 +2,11 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-
 LoginMenu::LoginMenu() : loginValidation("^[A-Za-z0-9]{1,10}$") {
+    currentWindow = LOGIN;
 }
+
+LoginMenu::~LoginMenu() {};
 
 void LoginMenu::textBox(sf::RenderWindow& window) {
 

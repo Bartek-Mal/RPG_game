@@ -1,38 +1,58 @@
-﻿  LoginMenu.cpp
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(73,80): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(73,80): warning C4244:         with
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(73,80): warning C4244:         [
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(73,80): warning C4244:             T=int
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(73,80): warning C4244:         ]
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(73,80): warning C4244:         and
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(73,80): warning C4244:         [
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(73,80): warning C4244:             T=float
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(73,80): warning C4244:         ]
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(73,68): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(73,68): warning C4244:         with
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(73,68): warning C4244:         [
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(73,68): warning C4244:             T=int
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(73,68): warning C4244:         ]
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(73,68): warning C4244:         and
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(73,68): warning C4244:         [
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(73,68): warning C4244:             T=float
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(73,68): warning C4244:         ]
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(76,85): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(76,85): warning C4244:         with
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(76,85): warning C4244:         [
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(76,85): warning C4244:             T=int
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(76,85): warning C4244:         ]
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(76,85): warning C4244:         and
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(76,85): warning C4244:         [
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(76,85): warning C4244:             T=float
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(76,85): warning C4244:         ]
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(76,73): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(76,73): warning C4244:         with
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(76,73): warning C4244:         [
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(76,73): warning C4244:             T=int
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(76,73): warning C4244:         ]
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(76,73): warning C4244:         and
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(76,73): warning C4244:         [
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(76,73): warning C4244:             T=float
-C:\Users\Bartek\Desktop\C++ Projects\RPG_game\LoginMenu.cpp(76,73): warning C4244:         ]
+﻿  characterClass.cpp
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(72,68): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(72,68): warning C4244:         with
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(72,68): warning C4244:         [
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(72,68): warning C4244:             T=int
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(72,68): warning C4244:         ]
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(72,68): warning C4244:         and
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(72,68): warning C4244:         [
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(72,68): warning C4244:             T=float
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(72,68): warning C4244:         ]
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(72,56): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(72,56): warning C4244:         with
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(72,56): warning C4244:         [
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(72,56): warning C4244:             T=int
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(72,56): warning C4244:         ]
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(72,56): warning C4244:         and
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(72,56): warning C4244:         [
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(72,56): warning C4244:             T=float
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(72,56): warning C4244:         ]
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(76,70): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(76,70): warning C4244:         with
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(76,70): warning C4244:         [
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(76,70): warning C4244:             T=int
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(76,70): warning C4244:         ]
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(76,70): warning C4244:         and
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(76,70): warning C4244:         [
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(76,70): warning C4244:             T=float
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(76,70): warning C4244:         ]
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(76,58): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(76,58): warning C4244:         with
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(76,58): warning C4244:         [
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(76,58): warning C4244:             T=int
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(76,58): warning C4244:         ]
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(76,58): warning C4244:         and
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(76,58): warning C4244:         [
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(76,58): warning C4244:             T=float
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(76,58): warning C4244:         ]
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(80,69): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(80,69): warning C4244:         with
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(80,69): warning C4244:         [
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(80,69): warning C4244:             T=int
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(80,69): warning C4244:         ]
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(80,69): warning C4244:         and
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(80,69): warning C4244:         [
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(80,69): warning C4244:             T=float
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(80,69): warning C4244:         ]
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(80,57): warning C4244: "argument": konwersja z "T" do "T", możliwa utrata danych
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(80,57): warning C4244:         with
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(80,57): warning C4244:         [
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(80,57): warning C4244:             T=int
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(80,57): warning C4244:         ]
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(80,57): warning C4244:         and
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(80,57): warning C4244:         [
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(80,57): warning C4244:             T=float
+C:\Users\Bartek\Desktop\C++ Projects\RPG_game\characterClass.cpp(80,57): warning C4244:         ]
+  main.cpp
+  Generowanie kodu...
   RPG_game.vcxproj -> C:\Users\Bartek\Desktop\C++ Projects\RPG_game\x64\Debug\RPG_game.exe

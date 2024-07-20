@@ -11,11 +11,11 @@ class LoginMenu : public Menu
 {
 public:
     LoginMenu();
+    ~LoginMenu();
     void textBox(sf::RenderWindow& window);
     StateEnum getCurrentWindow() const override;
     std::regex loginValidation;
 private:
-    StateEnum currentWindow = LOGIN;
     sf::Text nickname;
     sf::Text password;
     std::string inputText;
