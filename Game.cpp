@@ -1,10 +1,20 @@
 #include "Game.h"
 
 Game::Game() {
-    if (!warriorTexture.loadFromFile("warrior.gif")) {
-        std::cout << "No such file in directory!!" << std::endl;
+
+    for (int i = 1; i <= 7; ++i) {
+        sf::Texture texture;
+        if (!texture.loadFromFile("warrior/warrior" + std::to_string(i) + ".gif")) {
+            std::cout << "Failed to load warrior" << i << ".gif" << std::endl;
+        }
+        else {
+            warriorTextures.push_back(texture);
+        }
     }
-    warriorSprite.setTexture(warriorTexture);
+
+    if (!warriorTextures.empty()) {
+        warriorSprite.setTexture(warriorTextures[0]);
+    }
     warriorSprite.setPosition(position);
     warriorSprite.setScale(1.f, 1.f);
 
@@ -32,7 +42,7 @@ Game::Game() {
         std::cout << "No such file in directory!!" << std::endl;
     }
     statSprite.setTexture(statTexture);
-    statSprite.setPosition(24.f,12.5f);
+    statSprite.setPosition(24.f, 12.5f);
     statSprite.setScale(0.5f, 0.5f);
 }
 
@@ -55,38 +65,46 @@ void Game::player(CharacterEnum character, sf::RenderWindow& window) {
 }
 
 void Game::getStats(int* health, int* attack, int* mana, int* defense, int* energy) {
-    
 }
 
 void Game::movement() {
     float movementSpeed = 200.0f;
     sf::Time deltaTime = clock.restart();
     float dt = deltaTime.asSeconds();
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-    {
+    bool isMoving = false;
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
         position.x += -movementSpeed * dt;
         facing = LEFT;
+        isMoving = true;
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-    {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
         position.x += movementSpeed * dt;
         facing = RIGHT;
+        isMoving = true;
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-    {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
         position.y += -movementSpeed * dt;
         facing = UP;
+        isMoving = true;
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-    {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
         position.y += movementSpeed * dt;
         facing = DOWN;
+        isMoving = true;
     }
 
     warriorSprite.setPosition(position);
     mageSprite.setPosition(position);
     elfSprite.setPosition(position);
+
+    if (isMoving && animationClock.getElapsedTime().asSeconds() > 0.1f) {
+        currentFrame = (currentFrame + 1) % warriorTextures.size();
+        warriorSprite.setTexture(warriorTextures[currentFrame]);
+        animationClock.restart();
+    }
 }
+
 void Game::attack(sf::RenderWindow& window) {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
         float offset = 50.f;
@@ -114,27 +132,23 @@ void Game::attack(sf::RenderWindow& window) {
     }
 }
 
-
-
 void Game::displayStats(int health, int mana, int defense, int energy, sf::RenderWindow& window, CharacterEnum character) {
-
     window.draw(statSprite);
 
-    //HEALTH
+    // HEALTH
     float HealthWidth = NULL;
-
     switch (character) {
-    case WARRIOR: 
+    case WARRIOR:
         HealthWidth = 0.05f;
         break;
-    case MAGE: 
+    case MAGE:
         HealthWidth = 0.1f;
         break;
-    case ELF: 
+    case ELF:
         HealthWidth = 0.07f;
         break;
     default:
-        HealthWidth = 0.05f; 
+        HealthWidth = 0.05f;
         break;
     }
 
@@ -152,9 +166,8 @@ void Game::displayStats(int health, int mana, int defense, int energy, sf::Rende
         window.draw(healthPoint);
     }
 
-    //MANA
+    // MANA
     float ManaWidth = NULL;
-
     switch (character) {
     case WARRIOR:
         ManaWidth = 2.f;
@@ -183,8 +196,8 @@ void Game::displayStats(int health, int mana, int defense, int energy, sf::Rende
         window.draw(manaPoint);
     }
 
-    // Defense 
-    float DefenseWidth = NULL; 
+    // Defense
+    float DefenseWidth = NULL;
     switch (character) {
     case WARRIOR:
         DefenseWidth = 0.2f;
@@ -199,6 +212,7 @@ void Game::displayStats(int health, int mana, int defense, int energy, sf::Rende
         DefenseWidth = 0.2f;
         break;
     }
+
     defenseBarVec.clear();
     for (int i = 0; i < defense; i++) {
         sf::RectangleShape defenseBar(sf::Vector2f(DefenseWidth, height));
@@ -206,12 +220,13 @@ void Game::displayStats(int health, int mana, int defense, int energy, sf::Rende
         defenseBar.setPosition(80 + (i * DefenseWidth), 171);
         defenseBarVec.push_back(defenseBar);
     }
+
     for (const auto& defensePoint : defenseBarVec) {
         window.draw(defensePoint);
     }
 
-    // Energy 
-    float EnergyWidth = 0.25f; 
+    // Energy
+    float EnergyWidth = 0.25f;
     switch (character) {
     case WARRIOR:
         EnergyWidth = 0.25f;
@@ -226,6 +241,7 @@ void Game::displayStats(int health, int mana, int defense, int energy, sf::Rende
         EnergyWidth = 0.2f;
         break;
     }
+
     energyBarVec.clear();
     for (int i = 0; i < energy; i++) {
         sf::RectangleShape energyBar(sf::Vector2f(EnergyWidth, height));
@@ -233,7 +249,12 @@ void Game::displayStats(int health, int mana, int defense, int energy, sf::Rende
         energyBar.setPosition(80 + (i * EnergyWidth), 239);
         energyBarVec.push_back(energyBar);
     }
+
     for (const auto& energyPoint : energyBarVec) {
         window.draw(energyPoint);
     }
+}
+
+sf::Vector2f Game::getPosition() {
+    return position;
 }
