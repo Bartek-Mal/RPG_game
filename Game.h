@@ -34,6 +34,10 @@ private:
     sf::Sprite attackSprite;
     sf::Texture attackTexture;
 
+    //tekstura pod³ogi
+    sf::Sprite brickFloorSprite;
+    sf::Texture brickFloorTexture;
+
     //zegar
     sf::Clock clock;
 

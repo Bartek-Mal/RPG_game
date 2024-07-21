@@ -5,6 +5,7 @@
 #include "characterClass.h"
 #include "character.h"
 #include "Game.h"
+#include "enemy.h"
 #include <iostream>
 #include <memory>
 
@@ -22,6 +23,7 @@ int main() {
     Menu menu;
     CharacterClass characterClass;
     Game game;
+    Enemy enemy;
     std::unique_ptr<Character> playerCharacter = nullptr;
 
     while (window.isOpen()) {
@@ -57,9 +59,11 @@ int main() {
                     int health, attack, mana, defense, energy;
                     playerCharacter->stats(&health, &attack, &mana, &defense, &energy);
                     game.movement();  
-                    game.attack(window);
                     game.displayStats(health,mana,defense,energy,window, playerCharacter->characterClass());
+                    game.attack(window);
                     game.player(playerCharacter->characterClass(), window);
+                    enemy.enemy(window);
+                    enemy.tracking(game.getPosition());
                     std::cout << "GAME" << std::endl;
                 }
             }

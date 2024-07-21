@@ -36,7 +36,7 @@ Game::Game() {
         std::cout << "No such file in directory!!" << std::endl;
     }
     attackSprite.setTexture(attackTexture);
-    attackSprite.setScale(0.3f, 0.3f);
+    attackSprite.setScale(0.1f, 0.1f);
 
     if (!statTexture.loadFromFile("statDisplay.png")) {
         std::cout << "No such file in directory!!" << std::endl;
@@ -44,6 +44,11 @@ Game::Game() {
     statSprite.setTexture(statTexture);
     statSprite.setPosition(24.f, 12.5f);
     statSprite.setScale(0.5f, 0.5f);
+    if (!brickFloorTexture.loadFromFile("brickfloor.jpg")) {
+        std::cout << "No such file in directory!!" << std::endl;
+    }
+    brickFloorSprite.setTexture(brickFloorTexture);
+    brickFloorSprite.setScale(1.5f, 1.5f);
 }
 
 Game::~Game() {}
@@ -133,6 +138,7 @@ void Game::attack(sf::RenderWindow& window) {
 }
 
 void Game::displayStats(int health, int mana, int defense, int energy, sf::RenderWindow& window, CharacterEnum character) {
+    window.draw(brickFloorSprite);
     window.draw(statSprite);
 
     // HEALTH

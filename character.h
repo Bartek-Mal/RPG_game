@@ -9,6 +9,7 @@ public:
     virtual CharacterEnum characterClass() = 0;
     virtual ~Character() = default;
     sf::Vector2f position = { 300.f, 300.f };
+    
 };
 
 class Warrior : public Character {
